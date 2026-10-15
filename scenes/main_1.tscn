@@ -1,0 +1,37 @@
+[gd_scene format=4 uid="uid://dhwry24vxb22j"]
+
+[ext_resource type="PackedScene" uid="uid://bnnileuju2sq1" path="res://scenes/mikros_konstantinos.tscn" id="1_stv5y"]
+[ext_resource type="Texture2D" uid="uid://dyfsfyxhedby8" path="res://Game-1/New Piskel.png" id="2_qv23g"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hx442"]
+texture = ExtResource("2_qv23g")
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_oe34s"]
+sources/0 = SubResource("TileSetAtlasSource_hx442")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qv23g"]
+texture = ExtResource("2_qv23g")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_mo6kp"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_qv23g")
+
+[node name="main1" type="Node2D" unique_id=836987231]
+
+[node name="Mikros Konstantinos" parent="." unique_id=1337605539 instance=ExtResource("1_stv5y")]
+position = Vector2(25, -19)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1965618904]
+zoom = Vector2(6, 6)
+
+[node name="TileMap" type="TileMap" parent="." unique_id=412799635]
+tile_set = SubResource("TileSet_oe34s")
+format = 2
+layer_0/name = "Layer1"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=956436933]
+tile_map_data = PackedByteArray("AAD+/wAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAD//wEAAAAAAAAAAAD+/wEAAAAAAAAAAAACAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAADAAEAAAAAAAAAAAADAAIAAAAAAAAAAAAEAAIAAAAAAAAAAAACAAIAAAAAAAAAAAAAAAIAAAAAAAAAAAD//wIAAAAAAAAAAAD+/wIAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_mo6kp")

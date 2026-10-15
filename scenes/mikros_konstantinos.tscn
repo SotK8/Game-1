@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bnnileuju2sq1"]
+
+[ext_resource type="Texture2D" uid="uid://dyfsfyxhedby8" path="res://Game-1/New Piskel.png" id="1_rb2sm"]
+[ext_resource type="Script" uid="uid://csg003yoepxyo" path="res://scripts/mikros_konstantinos.gd" id="1_rbtd4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oe34s"]
+size = Vector2(16, 16)
+
+[node name="Mikros Konstantinos" type="CharacterBody2D" unique_id=1337605539]
+script = ExtResource("1_rbtd4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1128841369]
+texture = ExtResource("1_rb2sm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1283262998]
+shape = SubResource("RectangleShape2D_oe34s")
